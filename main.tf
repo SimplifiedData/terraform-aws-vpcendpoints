@@ -62,76 +62,76 @@ module "endpoints" {
       service         = "s3"
       service_type    = "Gateway"
       route_table_ids = data.aws_route_tables.this.ids
-      tags_name       = { Name = "${local.name}-s3${local.environment}-vpc-endpoint" }
+      tags            = { Name = "${local.name}-s3${local.environment}-vpc-endpoint" }
     }
     dynamodb = {
       service         = "dynamodb"
       service_type    = "Gateway"
       route_table_ids = data.aws_route_tables.this.ids
-      tags_name       = { Name = "${local.name}-dynamodb${local.environment}-vpc-endpoint" }
+      tags            = { Name = "${local.name}-dynamodb${local.environment}-vpc-endpoint" }
     }
     api_gateway = {
       service             = "execute-api"
       service_type        = "Interface"
       subnet_ids          = data.aws_subnets.nonexpose.ids
       private_dns_enabled = false
-      tags_name           = { Name = "${local.name}-apigw${local.environment}-vpc-endpoint" }
+      tags                = { Name = "${local.name}-apigw${local.environment}-vpc-endpoint" }
     }
     sqs = {
       service             = "sqs"
       service_type        = "Interface"
       subnet_ids          = data.aws_subnets.nonexpose.ids
       private_dns_enabled = false
-      tags_name           = { Name = "${local.name}-sqs${local.environment}-vpc-endpoint" }
+      tags                = { Name = "${local.name}-sqs${local.environment}-vpc-endpoint" }
     }
     sns = {
       service             = "sns"
       service_type        = "Interface"
       subnet_ids          = data.aws_subnets.nonexpose.ids
       private_dns_enabled = false
-      tags_name           = { Name = "${local.name}-sns${local.environment}-vpc-endpoint" }
+      tags                = { Name = "${local.name}-sns${local.environment}-vpc-endpoint" }
     }
     forecast = {
       service             = "forecast"
       service_type        = "Interface"
       subnet_ids          = data.aws_subnets.nonexpose.ids
       private_dns_enabled = false
-      tags_name           = { Name = "${local.name}-forecast${local.environment}-vpc-endpoint" }
+      tags                = { Name = "${local.name}-forecast${local.environment}-vpc-endpoint" }
     }
     forecastquery = {
       service             = "forecastquery"
       service_type        = "Interface"
       subnet_ids          = data.aws_subnets.nonexpose.ids
       private_dns_enabled = false
-      tags_name           = { Name = "${local.name}-forecastquery${local.environment}-vpc-endpoint" }
+      tags                = { Name = "${local.name}-forecastquery${local.environment}-vpc-endpoint" }
     }
     personalize = {
       service             = "personalize"
       service_type        = "Interface"
       subnet_ids          = data.aws_subnets.nonexpose.ids
       private_dns_enabled = false
-      tags_name           = { Name = "${local.name}-personalize${local.environment}-vpc-endpoint" }
+      tags                = { Name = "${local.name}-personalize${local.environment}-vpc-endpoint" }
     }
     cloudwatchlogs = {
       service             = "logs"
       service_type        = "Interface"
       subnet_ids          = data.aws_subnets.nonexpose.ids
       private_dns_enabled = false
-      tags_name           = { Name = "${local.name}-cloudwatchlogs${local.environment}-vpc-endpoint" }
+      tags                = { Name = "${local.name}-cloudwatchlogs${local.environment}-vpc-endpoint" }
     }
     ecrapi = {
       service             = "ecr.api"
       service_type        = "Interface"
       subnet_ids          = data.aws_subnets.nonexpose.ids
       private_dns_enabled = false
-      tags_name           = { Name = "${local.name}-ecrapi${local.environment}-vpc-endpoint" }
+      tags                = { Name = "${local.name}-ecrapi${local.environment}-vpc-endpoint" }
     }
     ecrdkr = {
       service             = "ecr.dkr"
       service_type        = "Interface"
       subnet_ids          = data.aws_subnets.nonexpose.ids
       private_dns_enabled = false
-      tags_name           = { Name = "${local.name}-ecrdkr${local.environment}-vpc-endpoint" }
+      tags                = { Name = "${local.name}-ecrdkr${local.environment}-vpc-endpoint" }
     }
   })
 
