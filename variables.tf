@@ -4,6 +4,10 @@ variable "endpoint_other" {
   type    = any
   default = {}
 }
+variable "security_group_rules_other" {
+ type    = any
+  default = {} 
+}
 #********************************************************************************#
 #                      *-- Variable for resource Network --*                     #
 #********************************************************************************#
